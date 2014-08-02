@@ -1,3 +1,3 @@
 ALE_ProjectExtras
 =================
-Test Files
+Some of the extra files create to support the ALE project.
