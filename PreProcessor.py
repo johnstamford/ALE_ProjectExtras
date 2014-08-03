@@ -2,7 +2,7 @@
 # Preprocessing the images for use
 # in training the Neural Network
 #
-# Author: John Stamford
+# Author: John Stamord
 # ========================================
 
 import os
@@ -40,10 +40,10 @@ class PreProcessor:
 
         print "Converted " + str(count) + " Files"
 
-    def ToString(self, img):
+    def ToString(self, img, New=True):
         self.OutputString = ""
         for pixel in iter(img.getdata()):
-            self.OutputString += str(pixel) + ", "
+            self.OutputString += str(pixel) + ","
 
             
             
@@ -77,7 +77,7 @@ class PreProcessor:
                 if CSV == True:
                     self.ToString(img)
                     with open(TextFile, "a") as myfile:
-                        myfile.write(self.OutputString + "\n")
+                        myfile.write(self.OutputString[:-1] + "\n")
 
     
             
